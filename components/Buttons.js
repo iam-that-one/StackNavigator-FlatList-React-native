@@ -2,18 +2,18 @@ import React from "react";
 import { TouchableOpacity, Text, Image } from "react-native";
 
 
-import { COLORS, SIZES, FONTS, SHADOWS  } from "../constants/Themes";
+import { COLORS, SIZES, FONTS, SHADOWS } from "../constants/Themes";
 export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
       style={{
         width: 40,
         height: 40,
         backgroundColor: COLORS.white,
         position: "absolute",
-        left:0,
-        marginTop:40,
-        marginLeft:10,
+        left: 0,
+        marginTop: 40,
+        marginLeft: 10,
         borderRadius: SIZES.extraLarge,
         alignItems: "center",
         justifyContent: "center",
@@ -31,24 +31,24 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
   );
 };
 
-export const RectButton = ({ height,width,minWidth, fontSize, handlePress, ...props }) => {
+export const RectButton = ({ height, width, minWidth, fontSize, handlePress, ...props }) => {
   return (
-    <TouchableOpacity activeOpacity={0.80} 
+    <TouchableOpacity activeOpacity={0.80}
       style={{
-        width:width,
+        width: width,
         backgroundColor: COLORS.primary,
         padding: SIZES.small,
         borderRadius: SIZES.extraLarge,
         minWidth: minWidth,
-        justifyContent:'center',
-        alignItems:'center',
-        height:height,
-      marginTop:10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: height,
+        marginTop: 10,
         ...props,
       }}
-      
+
       onPress={handlePress}
-      
+
     >
       <Text
         style={{

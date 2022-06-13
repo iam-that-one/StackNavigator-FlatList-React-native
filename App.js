@@ -3,7 +3,7 @@ import { Home } from './screens/Home';
 import { Details } from './screens/Details';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { Header } from './components/HomeHrader';
+
 
 
 export default function App() {
