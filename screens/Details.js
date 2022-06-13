@@ -10,7 +10,7 @@ import { COLORS, SIZES } from '../constants/Themes';
 export const Details = ({ route, navigation }) => {
 const { data } = route.params;
   return (
-    <View style={{ height: '100%', backgroundColor: COLORS.white }} >
+    <View style={{ height: '100%', backgroundColor: 'black' }} >
       <Header title={data.name}></Header>
       <CircleButton imgUrl={assets.left} handlePress={navigation.goBack}></CircleButton>
       <View
