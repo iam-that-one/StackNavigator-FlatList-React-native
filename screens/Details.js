@@ -1,30 +1,40 @@
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+
 import { Header } from '../components/HomeHrader';
-import { View } from 'react-native';
+import { View,Image } from 'react-native';
 import { CircleButton } from '../components/Buttons';
 import assets from '../constants/assets';
-export const Details  = () => {
-    const navigation = useNavigation();
-    return (
-       
-        <View>
-             
-            <Header title="Details"></Header>
-            <CircleButton style={{marginTop:50}} imgUrl={assets.left} handlePress={navigation.goBack}></CircleButton>
-           
-        <View activeOpacity={1.0}
+import { COLORS, SIZES } from '../constants/Themes';
+export const Details  = ({route, navigation}) => {
+  const { data } = route.params;
+    return (  
+        <View style={{height:'100%',backgroundColor:COLORS.white}} > 
+            <Header title={data.name}></Header>
+            <CircleButton imgUrl={assets.left} handlePress={navigation.goBack}></CircleButton>
+
+        <View  
         style={{
              justifyContent:'center',
              alignItems:'center',
              backgroundColor:'white',
-             height:'100%'
+            
             }}
-
               >
-       
+    <View style={{width:'100%',height:220,marginTop:30}}>
+  <Image
+        source={data.image}
+        resizeMode='cover'
+        style={{
+        width: "100%",
+        height: "200%",
+        borderTopLeftRadius: SIZES.font,
+        borderTopRightRadius: SIZES.font,
+  
+  }}
+  />
+  </View>
      </View>
+     
      </View>
     
       
